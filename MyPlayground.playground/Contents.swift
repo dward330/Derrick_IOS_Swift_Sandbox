@@ -41,4 +41,22 @@ for index in iterations{
 print("There are \(numOfWomanInMyLife) Women in Derrick's Life")
 
 /*Enum Demo:*/
-
+enum MobileOS: String {
+    case Android = "Android 7.0"
+    case IOS = "IOS 10"
+    case Smartphone
+}
+var x : MobileOS
+if let y = MobileOS(rawValue: "IOS 10")
+{
+    x = y
+}
+else{
+    x = MobileOS.Smartphone;
+}
+switch (x){
+case MobileOS.IOS:
+    print("I have a phone with an \(MobileOS.IOS) operating system, so my value is \(MobileOS.IOS.rawValue)");
+default:
+    print("I just have a smartphone.");
+}
